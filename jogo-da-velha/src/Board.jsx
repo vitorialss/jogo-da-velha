@@ -1,8 +1,9 @@
 import { useState } from "react";
 import React from "react";
 import Square from "./Square";
-
-
+import Quadro from "./quadro.js";
+import DivStatus from "./divStatus";
+import RestartButton from "./restartButton";
 
 function Board() {
     const [squares, setSquares] = React.useState(Array(9).fill(null));
@@ -38,7 +39,7 @@ function Board() {
     }
 
     return(
-        <div className="board">
+        <Quadro>
             <div className="board-row">
                 {renderSquare(0)}
                 {renderSquare(1)}
@@ -54,9 +55,9 @@ function Board() {
                 {renderSquare(7)}
                 {renderSquare(8)}
             </div>
-            <div className="status">{status}</div>
-            <button className="restart" onClick={handleRestart}>Restart Game!</button>
-        </div>
+            <DivStatus>{status}</DivStatus>
+            <RestartButton onClick={handleRestart}>Restart Game!</RestartButton>
+            </Quadro>
     )
 }
 

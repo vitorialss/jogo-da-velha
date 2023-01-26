@@ -1,10 +1,11 @@
 import React from "react"
+import RowButton from "./rowButton";
 
 function Square ({value, onClick}) {
     return (
-        <button className="square" onClick={onClick}>
+        <RowButton onClick={onClick}>
             {value}
-        </button>
+        </RowButton>
     )
 }
 export default Square;

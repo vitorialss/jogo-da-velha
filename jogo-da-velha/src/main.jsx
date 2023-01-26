@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Square from './Square'
-import Board from './Board'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Board from './Board.jsx';
+import GlobalStyle from './globalStyles';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Board />
+    <GlobalStyle />
+     <Board />
+    
   </React.StrictMode>
 )
