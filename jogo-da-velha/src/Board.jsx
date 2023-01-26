@@ -1,9 +1,11 @@
 import { useState } from "react";
 import React from "react";
 import Square from "./Square";
-import Quadro from "./quadro.js";
-import DivStatus from "./divStatus";
-import RestartButton from "./restartButton";
+import BoardDiv from "./assets/styles/boardDiv.js";
+import DivStatus from "./assets/styles/divStatus";
+import RestartButton from "./assets/styles/restartButton";
+import GameTitle from "./assets/styles/gameTitle";
+import BoardRow from "./assets/styles/boardRow";
 
 function Board() {
     const [squares, setSquares] = React.useState(Array(9).fill(null));
@@ -39,25 +41,29 @@ function Board() {
     }
 
     return(
-        <Quadro>
-            <div className="board-row">
+        <>
+        
+        <BoardDiv>
+        <GameTitle>Tic Tac Toe</GameTitle>
+            <BoardRow>
                 {renderSquare(0)}
                 {renderSquare(1)}
                 {renderSquare(2)}
-            </div>
-            <div className="board-row">
+            </BoardRow>
+            <BoardRow>
                 {renderSquare(3)}
                 {renderSquare(4)}
                 {renderSquare(5)}
-            </div>
-            <div className="board-row">
+            </BoardRow>
+            <BoardRow>
                 {renderSquare(6)}
                 {renderSquare(7)}
                 {renderSquare(8)}
-            </div>
+            </BoardRow>
             <DivStatus>{status}</DivStatus>
             <RestartButton onClick={handleRestart}>Restart Game!</RestartButton>
-            </Quadro>
+            </BoardDiv>
+            </>
     )
 }
 

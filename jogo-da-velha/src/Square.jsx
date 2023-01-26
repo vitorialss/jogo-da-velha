@@ -1,5 +1,5 @@
 import React from "react"
-import RowButton from "./rowButton";
+import RowButton from "./assets/styles/rowButton";
 
 function Square ({value, onClick}) {
     return (
